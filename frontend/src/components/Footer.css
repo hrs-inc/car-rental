@@ -1,0 +1,8 @@
+footer {
+  display: flexbox;
+  justify-content: center;
+}
+
+i {
+  margin-right: 10px;
+}
