@@ -1,46 +1,74 @@
-import React from "react";
-import "./Navbar.css";
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import { AiOutlineCar } from 'react-icons/ai';
+import { FaBars, FaTimes } from 'react-icons/fa';
+import { Button } from './Button';
 
-function Navbar() {
+import './Navbar.css';
+
+const Navbar = () => {
+  const [click, setClick] = useState(false);
+
+  const [button, setButton] = useState(true);
+
+  const handleClick = () => setClick(!click);
+  const closeMobileMenu = () => setClick(false);
+
+  const showButton = () => {
+    if (window.innerWidth <= 960) {
+      setButton(false);
+    } else {
+      setButton(true);
+    }
+  };
+
+  window.addEventListener('resize', showButton);
+
   return (
-    <div className="main">
-      <nav className="navbar navbar-expand-lg  px-3" id="navBar">
-        <div className="collapse navbar-collapse" id="myNav">
-          <ul className="navbar-nav mx-auto">
-            <li className="nav-item active">
-              <a href="#navbar" className="nav-link">
+    <>
+      <div className='navbar'>
+        <div className='navbar-container container'>
+          <Link to='/' className='navbar-logo'>
+            <AiOutlineCar className='navbar-icon' />
+            EasyCar
+          </Link>
+          <div className='menu-icon' onClick={handleClick}>
+            {click ? <FaTimes /> : <FaBars />}
+          </div>
+          <ul className={click ? 'nav-menu active' : 'nav-menu'}>
+            <li className='nav-item'>
+              <Link to='/' className='nav-links'>
                 Home
-              </a>
+              </Link>
             </li>
-            <li className="nav-item">
-              <a href="#skills" className="nav-link">
-                Skills
-              </a>
+            <li className='nav-item'>
+              <Link to='/services' className='nav-links'>
+                Services
+              </Link>
             </li>
-            <li className="nav-item">
-              <a href="#inventory" className="nav-link">
-                Inventory
-              </a>
+            <li className='nav-item'>
+              <Link to='/products' className='nav-links'>
+                Products
+              </Link>
             </li>
-            <li className="nav-item">
-              <a href="#featured" className="nav-link">
-                Featured
-              </a>
+            <li className='nav-btn'>
+              {button ? (
+                <Link to='/sign-up' className='btn-link'>
+                  <Button buttonStyle='btn--outline'>SIGN UP</Button>
+                </Link>
+              ) : (
+                <Link to='/sign-up' className='btn-link'>
+                  <Button buttonStyle='btn--outline' buttonSize='btn-mobile'>
+                    SIGN-UP
+                  </Button>
+                </Link>
+              )}
             </li>
           </ul>
-          {/*buttons for login and register*/}
-          <div>
-            <button type="button" className="btn btn-outline-info register">
-              Login
-            </button>
-            <button type="button" className="btn btn-info register ">
-              Sign Up
-            </button>
-          </div>
         </div>
-      </nav>
-    </div>
+      </div>
+    </>
   );
-}
+};
 
 export default Navbar;
