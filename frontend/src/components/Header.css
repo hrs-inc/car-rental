@@ -4,8 +4,8 @@
   overflow: hidden;
 }
 .height-max {
-  min-height: 100vh;
-  background-image: url("../image/1.jpg");
+  min-height: calc(100vh - 80px);
+  background-image: url('../image/1.jpg');
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
