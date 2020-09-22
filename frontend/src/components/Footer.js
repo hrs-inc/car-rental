@@ -1,20 +1,20 @@
-import React from "react";
-import "./Footer.css";
+import React from 'react';
+import './Footer.css';
 
 function Footer() {
   return (
-    <div className="footer">
-      <a href="#">
-        <i class="fab fa-facebook-f fa-3x"></i>
+    <div className='footer'>
+      <a href='#'>
+        <i className='fab fa-facebook-f fa-3x'></i>
       </a>
-      <a href="#">
-        <i class="fab fa-instagram fa-3x"></i>
+      <a href='#'>
+        <i className='fab fa-instagram fa-3x'></i>
       </a>
-      <a href="#">
-        <i class="far fa-envelope fa-3x"></i>
+      <a href='#'>
+        <i className='far fa-envelope fa-3x'></i>
       </a>
-      <a href="#">
-        <i class="fab fa-linkedin fa-3x"></i>
+      <a href='#'>
+        <i className='fab fa-linkedin fa-3x'></i>
       </a>
     </div>
   );
