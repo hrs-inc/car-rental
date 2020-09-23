@@ -7,7 +7,7 @@ function Login() {
     <div className="hero">
       <Navbar />
       <div className="loginbox">
-        <img src="../image/login.png" className="avatar" />
+        <img src="../image/login.jpg" className="avatar" />
         <h1>Login Here</h1>
         <form>
           <p>Email</p>
