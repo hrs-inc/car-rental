@@ -1,3 +1,4 @@
+/*
 :root {
   --mainBlue: #40acf1;
   --transparentBlue: rgba(64, 172, 241, 0.7);
@@ -13,6 +14,9 @@ body {
   color: var(--mainBlack);
   background: var(--mainWhite);
 }
+
+*/
+
 /* REM values to target root element 1REM = 16px */
 /*section title*/
 
@@ -206,6 +210,10 @@ body {
 }
 */
 /*header*/
+
+/*
+
+
 .header {
   clip-path: polygon(0 0, 100% 0, 100% 95%, 50% 100%, 0% 95%);
   color: var(--mainWhite);
@@ -255,7 +263,10 @@ body {
   color: var(--mainBlue);
   opacity: 0.6;
 }
+
+**/
 /*skills*/
+/*
 .skills-icon {
   font-size: 3rem;
   color: var(--mainYellow);
@@ -270,7 +281,10 @@ body {
   background: var(--mainBlue);
   margin: 1rem auto;
 }
+*/
 /*inventory*/
+
+/*
 .inventory {
   background: var(--mainGrey);
 }
@@ -310,3 +324,4 @@ body {
 .car-value:hover {
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
 }
+*/
